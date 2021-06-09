@@ -28,7 +28,7 @@ public class LojaController {
 	
 	@GetMapping
 	public Iterable<Loja> listarLoja(){ // o que é Iterable
-		List<Loja> listarTodaslojas = lojaService.listar();
+		List<Loja> listarTodasLojas = lojaService.listar();
 		return listarTodaslojas;
 	}
 	
