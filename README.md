@@ -26,4 +26,4 @@ Linguagens ou Framework Back-end: Java - (Spring Boot)<br>
 Tipo de aplicação: aplicação web
 Linguagem ou Framework Front-end: não
 
-## links referencia para Instalação e configuração das ferramentas:
+## links de referencia para Instalação e configuração das ferramentas:
