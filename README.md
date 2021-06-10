@@ -27,3 +27,4 @@ Tipo de aplicação: aplicação web
 Linguagem ou Framework Front-end: não
 
 ## Links de referencia para Instalação e configuração das ferramentas:
+## FAQ - Duvidas Frequentes:
