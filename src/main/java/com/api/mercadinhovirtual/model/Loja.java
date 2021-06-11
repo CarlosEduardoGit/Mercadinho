@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Loja {
 
-	private long codigoLoja;
+	private Short codigoLoja;
 	private String razaoSocialLoja;
 	private String nomeFantasiaLoja;
 	private Date dataInicioDaAtividadesLoja;
@@ -34,7 +34,7 @@ public class Loja {
 
 	
 	// Construtor Completo	
-	public Loja(long codigoLoja, String razaoSocialLoja, String nomeFantasiaLoja, Date dataInicioDaAtividadesLoja,
+	public Loja(Short codigoLoja, String razaoSocialLoja, String nomeFantasiaLoja, Date dataInicioDaAtividadesLoja,
 			String cnpjLoja, String inscricaoMunicipalLoja, String inscricaoEstadualLoja,
 			String atividadePrincipalcnaeLoja, String enderecoLoja, int numeroLoja, String bairroLoja,
 			String cidadeLoja, String estadoLoja, String telefoneComercial, String celularLoja,
@@ -68,12 +68,12 @@ public class Loja {
 
 	
 	// Métodos Gets e Sets
-	public long getCodigoLoja() {
+	public Short getCodigoLoja() {
 		return codigoLoja;
 	}
 
 
-	public void setCodigoLoja(long codigoLoja) {
+	public void setCodigoLoja(Short codigoLoja) {
 		this.codigoLoja = codigoLoja;
 	}
 

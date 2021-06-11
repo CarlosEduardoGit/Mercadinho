@@ -14,14 +14,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.api.mercadinhovirtual.mensagens.RecursoNaoEncontradoException;
 import com.api.mercadinhovirtual.model.Funcionario;
 import com.api.mercadinhovirtual.model.Loja;
+import com.api.mercadinhovirtual.service.FuncionarioService;
 import com.api.mercadinhovirtual.service.LojaService;
 
+@RestController
+@RequestMapping("/api/v1/funcionario")
 public class FuncionarioController {
-	@RestController
-	@RequestMapping("/api/v1/funcionario")
-	public class LojaController {
 		 
 		
 		@Autowired
@@ -30,8 +31,8 @@ public class FuncionarioController {
 		
 		@GetMapping
 		public Iterable<Funcionario> listarFuncionario(){ // o que é Iterable
-			List<Funcionario> listarTodosFuncionarios = funcionarioService.listar();
-			return funcionarioService;
+			Iterable<Funcionario> listarTodosFuncionarios = funcionarioService.listar();
+			return listarTodosFuncionarios;
 		}
 		
 		
@@ -75,4 +76,5 @@ public class FuncionarioController {
 			}
 		}	
 
+	
 }

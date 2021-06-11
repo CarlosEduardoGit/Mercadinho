@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.api.mercadinhovirtual.mensagens.RecursoNaoEncontradoException;
 import com.api.mercadinhovirtual.model.Loja;
 import com.api.mercadinhovirtual.service.LojaService;
 
@@ -28,8 +29,8 @@ public class LojaController {
 	
 	@GetMapping
 	public Iterable<Loja> listarLoja(){ // o que é Iterable
-		List<Loja> listarTodasLojas = lojaService.listar();
-		return listarTodaslojas;
+		Iterable<Loja> listarTodasLojas = lojaService.listar();
+		return listarTodasLojas;
 	}
 	
 	
