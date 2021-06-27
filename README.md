@@ -28,3 +28,25 @@ Linguagem ou Framework Front-end: não
 
 ## Links de referencia para Instalação e configuração das ferramentas:
 ## FAQ - Duvidas Frequentes:
+
+#-----------------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------------
+# Colaboração de Rosemeire Deconti
+## Modelo de banco de dados:
+- MySql script para criação BD 'groceryStore': 
+- Tabelas:
+  Carrinho de compras: CARTS e CARTS_ITEMS;
+  Ordens de venda: SALES e SALES_ITEMS;
+  Ordens de compra: PURCHASES e PURCHASES_ITEMS;
+  Movimento de estoque: MOVEMENTS;
+  Estoque: STOCKS;
+  Lojas: STORES;
+  Produtos: PRODUCTS;
+  Clientes: CUSTOMERS;
+  Fornecedores: VENDORS;
+  Empregados: EMPLOYEES;
+  Usuários: USERS;
+  Contatos: CONTACTS (são os endereços das lojas, clientes, fornecedores e usuários);
+  Imagens: IMAGES (são as fotos dos produtos armazenadas no Github e acessadas por URL para realizar os testes);
+- Diagrama: 
+
