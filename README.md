@@ -33,7 +33,7 @@ Linguagem ou Framework Front-end: não
 #-----------------------------------------------------------------------------------------------------------------------
 # Colaboração de Rosemeire Deconti
 ## Modelo de banco de dados:
-- MySql script para criação BD 'groceryStore': 
+- MySql script para criação BD 'groceryStore': https://github.com/CarlosEduardoGit/Mercadinho-Virtual/blob/master/sql/GroceryStoreMySql.sql
 - Tabelas:
   Carrinho de compras: CARTS e CARTS_ITEMS;
   Ordens de venda: SALES e SALES_ITEMS;
@@ -48,5 +48,5 @@ Linguagem ou Framework Front-end: não
   Usuários: USERS;
   Contatos: CONTACTS (são os endereços das lojas, clientes, fornecedores e usuários);
   Imagens: IMAGES (são as fotos dos produtos armazenadas no Github e acessadas por URL para realizar os testes);
-- Diagrama: 
+- Diagrama: https://github.com/CarlosEduardoGit/Mercadinho-Virtual/blob/master/sql/model.pdf
 
