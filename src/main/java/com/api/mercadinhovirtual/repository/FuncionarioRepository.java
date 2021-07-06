@@ -1,15 +1,13 @@
 package com.api.mercadinhovirtual.repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.api.mercadinhovirtual.model.Funcionario;
+import com.api.mercadinhovirtual.model.Loja;
 
-public interface FuncionarioRepository extends CrudRepository<Funcionario, Short> {
-	
-	public Funcionario findByCodigo(Short codigoFuncionario);
+
+public interface FuncionarioRepository extends JpaRepository<Funcionario, Long>{
+
+	public Funcionario findByCodigo(Long codigo);
 	
 }
-
-/*
- public interface CursoRepository extends JpaRepository <Funcionario, Short>{}
- */

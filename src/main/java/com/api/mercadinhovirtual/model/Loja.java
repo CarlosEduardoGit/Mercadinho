@@ -1,15 +1,30 @@
 package com.api.mercadinhovirtual.model;
 
+
+import java.io.Serializable;
 import java.util.Date;
 
-public class Loja {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-	private Short codigoLoja;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="LOJAS")
+public class Loja implements Serializable{
+	
+	private static final Long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long codigo;
 	private String razaoSocialLoja;
 	private String nomeFantasiaLoja;
-	private Date dataInicioDaAtividadesLoja;
+	private Date dataInicioDasAtividadesLoja;
 	private String cnpjLoja;
-	private String inscricaoMunicipalLoja;
+	/*private String inscricaoMunicipalLoja;
 	private String inscricaoEstadualLoja;
 	private String atividadePrincipalcnaeLoja;
 	private String enderecoLoja;
@@ -26,7 +41,7 @@ public class Loja {
 	private String instagramLoja;
 	private String linkedinLoja;
 	private String youtubeLoja;
-	private boolean lojaAtiva;
+	private String lojaAtiva; // tipo boolean não existe no SQLSERVER */
 	
 	
 	// Construtor Vazio
@@ -34,19 +49,19 @@ public class Loja {
 
 	
 	// Construtor Completo	
-	public Loja(Short codigoLoja, String razaoSocialLoja, String nomeFantasiaLoja, Date dataInicioDaAtividadesLoja,
-			String cnpjLoja, String inscricaoMunicipalLoja, String inscricaoEstadualLoja,
+	public Loja(Long codigo, String razaoSocialLoja, String nomeFantasiaLoja, Date dataInicioDasAtividadesLoja,
+			String cnpjLoja/*, String inscricaoMunicipalLoja, String inscricaoEstadualLoja,
 			String atividadePrincipalcnaeLoja, String enderecoLoja, int numeroLoja, String bairroLoja,
 			String cidadeLoja, String estadoLoja, String telefoneComercial, String celularLoja,
 			String whatsAppComercialLoja, String emailLoja, String siteLoja, String facebookLoja, String instagramLoja,
-			String linkedinLoja, String youtubeLoja, boolean lojaAtiva) {
+			String linkedinLoja, String youtubeLoja, String lojaAtiva*/) {
 	
-		this.codigoLoja = codigoLoja;
+		this.codigo = codigo;
 		this.razaoSocialLoja = razaoSocialLoja;
 		this.nomeFantasiaLoja = nomeFantasiaLoja;
-		this.dataInicioDaAtividadesLoja = dataInicioDaAtividadesLoja;
+		this.dataInicioDasAtividadesLoja = dataInicioDasAtividadesLoja;
 		this.cnpjLoja = cnpjLoja;
-		this.inscricaoMunicipalLoja = inscricaoMunicipalLoja;
+		/*this.inscricaoMunicipalLoja = inscricaoMunicipalLoja;
 		this.inscricaoEstadualLoja = inscricaoEstadualLoja;
 		this.atividadePrincipalcnaeLoja = atividadePrincipalcnaeLoja;
 		this.enderecoLoja = enderecoLoja;
@@ -63,18 +78,18 @@ public class Loja {
 		this.instagramLoja = instagramLoja;
 		this.linkedinLoja = linkedinLoja;
 		this.youtubeLoja = youtubeLoja;
-		this.lojaAtiva = lojaAtiva;
+		this.lojaAtiva = lojaAtiva;*/
 	}
 
 	
 	// Métodos Gets e Sets
-	public Short getCodigoLoja() {
-		return codigoLoja;
+	public Long getCodigo() {
+	   return codigo;
 	}
 
 
-	public void setCodigoLoja(Short codigoLoja) {
-		this.codigoLoja = codigoLoja;
+	public void setCodigo(Long codigo) {
+	   this.codigo = codigo;
 	}
 
 
@@ -98,13 +113,13 @@ public class Loja {
 	}
 
 
-	public Date getDataInicioDaAtividadesLoja() {
-		return dataInicioDaAtividadesLoja;
+	public Date getDataInicioDasAtividadesLoja() {
+		return dataInicioDasAtividadesLoja;
 	}
 
 
-	public void setDataInicioDaAtividadesLoja(Date dataInicioDaAtividadesLoja) {
-		this.dataInicioDaAtividadesLoja = dataInicioDaAtividadesLoja;
+	public void setDataInicioDasAtividadesLoja(Date dataInicioDasAtividadesLoja) {
+		this.dataInicioDasAtividadesLoja = dataInicioDasAtividadesLoja;
 	}
 
 
@@ -117,7 +132,7 @@ public class Loja {
 		this.cnpjLoja = cnpjLoja;
 	}
 
-
+/*
 	public String getInscricaoMunicipalLoja() {
 		return inscricaoMunicipalLoja;
 	}
@@ -288,15 +303,12 @@ public class Loja {
 	}
 
 
-	public boolean isLojaAtiva() {
+	public String isLojaAtiva() {
 		return lojaAtiva;
 	}
 
 
-	public void setLojaAtiva(boolean lojaAtiva) {
+	public void setLojaAtiva(String lojaAtiva) {
 		this.lojaAtiva = lojaAtiva;
-	}
-	
-	
-
+	}*/
 }
