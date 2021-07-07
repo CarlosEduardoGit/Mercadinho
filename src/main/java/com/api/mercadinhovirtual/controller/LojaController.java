@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.http.HttpStatus;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 
 import com.api.mercadinhovirtual.model.Loja;
 import com.api.mercadinhovirtual.repository.LojaRepository;
@@ -29,7 +32,7 @@ public class LojaController {
 	
 	
 	
-	@GetMapping
+	@GetMapping("/listar")
 	public ModelAndView Lojas() {
 		ModelAndView mv = new ModelAndView("lojas");
 		List<Loja> lojas = lojaService.listar();
@@ -38,10 +41,29 @@ public class LojaController {
 	}
 	
 	@GetMapping("/{codigo}")
-	public ModelAndView LojasPorId(@PathVariable Long codigo) {
+	public ModelAndView LojaPorId(@PathVariable Long codigo) {
 		ModelAndView mv = new ModelAndView("lojaDetalhada");
 		Loja loja = lojaService.buscarPorCodigo(codigo);
 		mv.addObject( "loja", loja );
+		return mv;
+	}
+	
+	@GetMapping("/inserir")
+	public ModelAndView LojaForm() {
+		ModelAndView mv = new ModelAndView("lojaForm");
+		return mv;
+	}
+	
+	@PostMapping("/inserir")
+	public ModelAndView SalvarLoja(@Validated Loja loja, BindingResult result, RedirectAttributes attributes) {
+		if(result.hasErrors()) {
+			ModelAndView mv = new ModelAndView("lojaForm");
+			return mv;
+		}
+		lojaService.salvar(loja);
+		ModelAndView mv = new ModelAndView("lojas");
+		List<Loja> lojas = lojaService.listar();
+		mv.addObject( "lojas", lojas );
 		return mv;
 	}
 }

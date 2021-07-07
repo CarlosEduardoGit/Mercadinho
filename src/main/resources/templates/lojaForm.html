@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="ISO-8859-1">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title>MercadinhoVirtual</title>
+</head>
+<body>
+
+	<head>
+	  <!-- As a link -->
+	  <nav class="navbar navbar-light bg-light">
+  	    <div class="container-fluid">
+   	      <a class="navbar-brand" href="#">MercadinhoVirtual</a>
+  	    </div>
+	  </nav>
+	</head>
+	
+	<section>
+	  <div class="container">
+	  	<br>
+	  	<nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+           <li class="breadcrumb-item"><a href="/api/v1/lojas/listar">Home</a></li>
+           <li class="breadcrumb-item active" aria-current="page">Nova Loja</li>
+          </ol>
+        </nav><br>
+        
+        <h3>Criar Lojas</h3><br>
+        
+        <div>
+        	<form method="post">
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="razaoSocialLoja" placeholder="Razao Social Loja *">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="nomeFantasiaLoja" placeholder="Nome Fantasia Loja *">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="dataInicioDasAtividadesLoja" placeholder="Razao Social Loja *">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="cnpjLoja" placeholder="Cnpj Loja *">
+        		</div><br>
+        		
+        		
+        		
+        		
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="inscricaoMunicipalLoja" placeholder="inscricaoMunicipalLoja">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="inscricaoEstadualLoja" placeholder="inscricaoEstadualLoja">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="atividadePrincipalcnaeLoja" placeholder="atividadePrincipalcnaeLoja">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="atividadePrincipalcnaeLoja" placeholder="atividadePrincipalcnaeLoja">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="enderecoLoja" placeholder="enderecoLoja *">
+        		</div><br>
+        		<div class="form-group">
+        			<input type="text" class="form-control" name="numeroLoja" placeholder="numeroLoja *">
+        		</div><br>
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		<button type="submit" class="btn btn-primary" style="margin-top: 10px;">Salvar</button>
+        		<a href="/api/v1/lojas/listar" class="btn btn-light" role="button" style="margin-top: 10px;">Cancelar</a>
+        	</form>
+        </div>  
+       </div>
+	</section>
+</body>
+</html>
+	

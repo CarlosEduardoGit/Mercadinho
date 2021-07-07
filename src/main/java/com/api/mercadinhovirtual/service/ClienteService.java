@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.api.mercadinhovirtual.model.Cliente;
+import com.api.mercadinhovirtual.model.Funcionario;
 import com.api.mercadinhovirtual.model.Loja;
 import com.api.mercadinhovirtual.repository.ClienteRepository;
 
@@ -25,7 +26,10 @@ public class ClienteService {
 		return clienteRepository.findById(codigo).get();
 	}
 	
-	
+	public Cliente salvar(Cliente cliente) {
+		return clienteRepository.save(cliente);
+		
+	}
 	
 	
 	

@@ -26,7 +26,10 @@ public class FuncionarioService {
 		return funcionarioRepository.findById(codigo).get();
 	}
 	
-	
+	public Funcionario salvar(Funcionario funcionario) {
+		return funcionarioRepository.save(funcionario);
+		
+	}
 	
 	
 	

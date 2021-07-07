@@ -25,4 +25,9 @@ public class LojaService {
 	public Loja buscarPorCodigo(Long codigo) {
 		return lojaRepository.findById(codigo).get();
 	}
+
+	public Loja salvar(Loja loja) {
+		return lojaRepository.save(loja);
+		
+	}
 }

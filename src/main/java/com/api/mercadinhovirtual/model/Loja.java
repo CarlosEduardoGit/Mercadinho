@@ -11,6 +11,8 @@ import javax.persistence.Id;
 
 import javax.persistence.Table;
 
+import org.springframework.lang.NonNull;
+
 @Entity
 @Table(name="LOJAS")
 public class Loja implements Serializable{
@@ -20,14 +22,20 @@ public class Loja implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long codigo;
+	@NonNull
 	private String razaoSocialLoja;
+	@NonNull
 	private String nomeFantasiaLoja;
+	@NonNull
 	private Date dataInicioDasAtividadesLoja;
+	@NonNull
 	private String cnpjLoja;
-	/*private String inscricaoMunicipalLoja;
+	private String inscricaoMunicipalLoja;
 	private String inscricaoEstadualLoja;
 	private String atividadePrincipalcnaeLoja;
+	@NonNull
 	private String enderecoLoja;
+	@NonNull
 	private int numeroLoja;
 	private String bairroLoja;
 	private String cidadeLoja;
@@ -41,7 +49,7 @@ public class Loja implements Serializable{
 	private String instagramLoja;
 	private String linkedinLoja;
 	private String youtubeLoja;
-	private String lojaAtiva; // tipo boolean não existe no SQLSERVER */
+	private String lojaAtiva; // tipo boolean não existe no SQLSERVER
 	
 	
 	// Construtor Vazio
@@ -50,18 +58,18 @@ public class Loja implements Serializable{
 	
 	// Construtor Completo	
 	public Loja(Long codigo, String razaoSocialLoja, String nomeFantasiaLoja, Date dataInicioDasAtividadesLoja,
-			String cnpjLoja/*, String inscricaoMunicipalLoja, String inscricaoEstadualLoja,
+			String cnpjLoja, String inscricaoMunicipalLoja, String inscricaoEstadualLoja,
 			String atividadePrincipalcnaeLoja, String enderecoLoja, int numeroLoja, String bairroLoja,
 			String cidadeLoja, String estadoLoja, String telefoneComercial, String celularLoja,
 			String whatsAppComercialLoja, String emailLoja, String siteLoja, String facebookLoja, String instagramLoja,
-			String linkedinLoja, String youtubeLoja, String lojaAtiva*/) {
+			String linkedinLoja, String youtubeLoja, String lojaAtiva) {
 	
 		this.codigo = codigo;
 		this.razaoSocialLoja = razaoSocialLoja;
 		this.nomeFantasiaLoja = nomeFantasiaLoja;
 		this.dataInicioDasAtividadesLoja = dataInicioDasAtividadesLoja;
 		this.cnpjLoja = cnpjLoja;
-		/*this.inscricaoMunicipalLoja = inscricaoMunicipalLoja;
+		this.inscricaoMunicipalLoja = inscricaoMunicipalLoja;
 		this.inscricaoEstadualLoja = inscricaoEstadualLoja;
 		this.atividadePrincipalcnaeLoja = atividadePrincipalcnaeLoja;
 		this.enderecoLoja = enderecoLoja;
@@ -78,7 +86,7 @@ public class Loja implements Serializable{
 		this.instagramLoja = instagramLoja;
 		this.linkedinLoja = linkedinLoja;
 		this.youtubeLoja = youtubeLoja;
-		this.lojaAtiva = lojaAtiva;*/
+		this.lojaAtiva = lojaAtiva;
 	}
 
 	
@@ -132,7 +140,7 @@ public class Loja implements Serializable{
 		this.cnpjLoja = cnpjLoja;
 	}
 
-/*
+
 	public String getInscricaoMunicipalLoja() {
 		return inscricaoMunicipalLoja;
 	}
@@ -310,5 +318,5 @@ public class Loja implements Serializable{
 
 	public void setLojaAtiva(String lojaAtiva) {
 		this.lojaAtiva = lojaAtiva;
-	}*/
+	}
 }
