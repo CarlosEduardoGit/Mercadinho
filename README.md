@@ -1,7 +1,7 @@
 # Aplicação Web de um Mercadinho-Virtual
 
 #### Em Desenvolvimento!!!
-#### Ultima atualização 06/07/2021
+#### Ultima atualização 07/07/2021
 
 ## Descrição: 
 
